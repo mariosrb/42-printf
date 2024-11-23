@@ -6,7 +6,7 @@
 /*   By: mdodevsk <mdodevsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:53:30 by mdodevsk          #+#    #+#             */
-/*   Updated: 2024/11/22 18:51:49 by mdodevsk         ###   ########.fr       */
+/*   Updated: 2024/11/23 17:05:46 by mdodevsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_putnbr_u(unsigned int n)
 {
 	unsigned long	nb;
-	int	count;
+	int				count;
 
 	nb = (unsigned long)n;
 	count = 0;

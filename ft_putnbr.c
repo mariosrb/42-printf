@@ -6,7 +6,7 @@
 /*   By: mdodevsk <mdodevsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 18:53:30 by mdodevsk          #+#    #+#             */
-/*   Updated: 2024/11/22 14:59:02 by mdodevsk         ###   ########.fr       */
+/*   Updated: 2024/11/23 17:06:01 by mdodevsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 int	ft_putnbr(int n)
 {
 	long	nb;
-	int	count;
+	int		count;
 
 	nb = n;
 	count = 0;
 	if (nb < 0)
 	{
-		write (1, "-", 1);
+		write(1, "-", 1);
 		nb = -nb;
 		count++;
 	}

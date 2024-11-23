@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_ptr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdodevsk <mdodevsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/22 19:16:34 by mdodevsk          #+#    #+#             */
-/*   Updated: 2024/11/22 19:21:41 by mdodevsk         ###   ########.fr       */
+/*   Created: 2024/11/23 17:09:56 by mdodevsk          #+#    #+#             */
+/*   Updated: 2024/11/23 17:15:37 by mdodevsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int main (void)
+int	ft_ptr(void *adress)
 {
-	int a = 15;
-	printf("%d\n", a);
-	printf("%p\n", (void*)&a);
-	return (0);
+	unsigned long long	p;
+
+	p = (unsigned long long)adress;
+	ft_putlstr("0x");
+	return (ft_putnbr_hex('x', p) + 2);
 }

@@ -6,7 +6,7 @@
 /*   By: mdodevsk <mdodevsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:30:17 by mdodevsk          #+#    #+#             */
-/*   Updated: 2024/11/22 19:28:15 by mdodevsk         ###   ########.fr       */
+/*   Updated: 2024/11/23 17:15:50 by mdodevsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,18 @@ int	check_format(char c, va_list args)
 	else if (c == 'u')
 		return (ft_putnbr_u(va_arg(args, unsigned int)));
 	else if (c == 'p')
-		return (ft_putnbr_hex(va_arg(args, void*)));
+		return (ft_ptr(va_arg(args, void *)));
+	else if (c == 'x' || c == 'X')
+		return (ft_putnbr_hex(c, va_arg(args, unsigned long long)));
 	return (0);
 }
 
-int ft_printf(const char *format, ...)
+int	ft_printf(const char *format, ...)
 {
 	va_list	args;
-	int	i;
-	int	count;
-	
+	int		i;
+	int		count;
+
 	if (!format)
 		return (-1);
 	va_start(args, format);
@@ -90,10 +92,10 @@ int	main()
     printf("Return printf: %d | Return ft_printf: %d\n\n", ret_printf, ret_ft_printf);
 
 	// Test %x et %X
-	/*printf("=== Test %%x and %%X ===");
-	ret_printf = printf("Printf   : [%x] [%X]\n", 255, 255);
-    ret_ft_printf = ft_printf("ft_printf: [%x] [%X]\n", 255, 255);
-    printf("Return printf: %d | Return ft_printf: %d\n\n", ret_printf, ret_ft_printf);*/
+	printf("=== Test %%x and %%X ===\n");
+	ret_printf = printf("Printf   : [%x] [%X]\n", 22255, 22255);
+    ret_ft_printf = ft_printf("ft_printf: [%x] [%X]\n", 22255, 22255);
+    printf("Return printf: %d | Return ft_printf: %d\n\n", ret_printf, ret_ft_printf);
 	
 	// Test %p
     printf("=== Test %%p ===\n");
@@ -101,6 +103,6 @@ int	main()
     ret_printf = printf("Printf   : [%p]\n", (void *)&x);
     ret_ft_printf = ft_printf("ft_printf: [%p]\n", (void *)&x);
     printf("Return printf: %d | Return ft_printf: %d\n\n", ret_printf, ret_ft_printf);
-
+	
 	return (0);
 }
