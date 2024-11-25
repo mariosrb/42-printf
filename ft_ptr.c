@@ -6,7 +6,7 @@
 /*   By: mdodevsk <mdodevsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 17:09:56 by mdodevsk          #+#    #+#             */
-/*   Updated: 2024/11/23 17:15:37 by mdodevsk         ###   ########.fr       */
+/*   Updated: 2024/11/25 12:46:14 by mdodevsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 int	ft_ptr(void *adress)
 {
-	unsigned long long	p;
+	unsigned long	p;
 
-	p = (unsigned long long)adress;
+	if (!adress)
+		return (ft_putlstr("(nil)"));
+	p = (unsigned long)adress;
 	ft_putlstr("0x");
 	return (ft_putnbr_hex('x', p) + 2);
 }
