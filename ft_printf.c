@@ -6,7 +6,7 @@
 /*   By: mdodevsk <mdodevsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:30:17 by mdodevsk          #+#    #+#             */
-/*   Updated: 2024/11/25 12:55:58 by mdodevsk         ###   ########.fr       */
+/*   Updated: 2024/11/26 15:28:04 by mdodevsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ int	check_format(char c, va_list args)
 
 int	ft_printf(const char *format, ...)
 {
-	va_list args;
-	int i;
-	int count;
+	va_list	args;
+	int		i;
+	int		count;
 
 	if (!format)
 		return (-1);
