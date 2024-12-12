@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+   /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
@@ -6,7 +6,7 @@
 /*   By: mdodevsk <mdodevsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:30:17 by mdodevsk          #+#    #+#             */
-/*   Updated: 2024/11/26 15:28:04 by mdodevsk         ###   ########.fr       */
+/*   Updated: 2024/11/27 15:22:12 by mdodevsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,3 +55,16 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
+// int     main(void)
+// {
+//         int ret_original;
+//         int ret_custom;
+
+//         printf("=== Hexadecimal Tests ===\n");
+
+//         // Test simple
+//         ret_original = printf("Original %%x: [%x]\n", 42);
+//         ret_custom = ft_printf("Custom %%x: [%x]\n", 42);
+//         printf("Return printf: %d | Return ft_printf: %d\n\n", ret_original, ret_custom);
+// 		return (0);
+// }
